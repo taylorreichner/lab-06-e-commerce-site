@@ -27,8 +27,9 @@ export function renderGame(game) {
     pPrice.textContent = `$${game.price}`;
     li.append(pPrice);
 
-    
-    
-    
+    const button = document.createElement('button');
+    button.textContent = 'Add to cart';
+    li.append(button);
+
     return li;
 }
