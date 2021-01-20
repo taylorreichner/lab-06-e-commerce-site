@@ -122,3 +122,10 @@ footer {
       height: 80px;
       width: 100px;
   }
+
+  ul {
+      width:  100%;
+      display: flex;
+      flex-wrap: flex;
+      justify-content: space-evenly;
+  }

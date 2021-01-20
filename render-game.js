@@ -12,7 +12,21 @@ export function renderGame(game) {
     li.append(img);
     img.src = `../assets/${game.image}`;
     
+    const pDescription = document.createElement('p');
+    pDescription.classList.add('game-description');
+    pDescription.textContent = game.description;
+    li.append(pDescription);
+
+    const pCategory = document.createElement('p');
+    pCategory.classList.add('game-category');
+    pCategory.textContent = game.category;
+    li.append(pCategory);
     
+    const pPrice = document.createElement('p');
+    pPrice.classList.add('game-price');
+    pPrice.textContent = `$${game.price}`;
+    li.append(pPrice);
+
     
     
     

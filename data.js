@@ -28,7 +28,7 @@ export const games = [
          name: `Catan Universe`,
          image: `catan-universe.png`,
          description: 'Battle against people to gain resourses and grow your country',
-         catagory: `Turn based board game`,
+         category: `Turn based board game`,
          price: 13,
      },
      {
@@ -36,7 +36,7 @@ export const games = [
          name: `Hell Let Loose`,
          image: `hell-let-loose.png`,
          description: `Fight in large scale battles from world war 1`,
-         catagory: `large map FPS`,
+         category: `large map FPS`,
          price: 40,
      }
 ]
