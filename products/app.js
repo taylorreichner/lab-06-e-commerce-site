@@ -1,12 +1,12 @@
 // import functions and grab DOM elements
-import { games } from './data.js';
+import { games } from '../data.js';
 import { renderGame } from './render-game.js'
 
 const list = document.getElementById('list');
 // initialize state
 for (let game of games) {
 const gameElement = renderGame(game);
-console.log(games);
+
 list.append(gameElement);
 
 }

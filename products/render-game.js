@@ -10,7 +10,7 @@ export function renderGame(game) {
     const img = document.createElement('img');
     img.classList.add('game-image');
     li.append(img);
-    img.src = `../assets/${game.image}`;
+    img.src = `./assets/${game.image}`;
     
     const pDescription = document.createElement('p');
     pDescription.classList.add('game-description');
