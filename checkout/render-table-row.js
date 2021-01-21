@@ -1,3 +1,5 @@
+import { calcItemTotal } from "../utils.js";
+
 export function renderTableRow(cartItem, game) {
     const quantity = cartItem.quantity;
     
@@ -9,7 +11,7 @@ export function renderTableRow(cartItem, game) {
 
     nameTd.textContent = game.name;
     quantityTd.textContent = quantity;
-    priceTd.textContent = `$${getGameTotal(cartItem, game)}`;
+    priceTd.textContent = `$${calcItemTotal(cartItem, game)}`;
     
     tr.append(nameTd, quantityTd, priceTd);
 
@@ -17,6 +19,3 @@ export function renderTableRow(cartItem, game) {
     
     }
 
-export function getGameTotal(cartItem, game) {
-    return cartItem.quantity * game.price;
-}
