@@ -5,6 +5,8 @@ export function renderTableRow(cartItem, game) {
     
     const tr = document.createElement('tr');
 
+    console.log(tr);
+
     const nameTd = document.createElement('td');
     const quantityTd = document.createElement('td');
     const priceTd = document.createElement('td')
