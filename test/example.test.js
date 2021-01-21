@@ -44,10 +44,7 @@ test('calcItemTotal should take in a quantity and an amount then return a total'
 
 
 test('renderTableRow will return the item, its quantity and its product', (expect) => {
-    expected = {
-        
-
-    }
+    expected = ``
      
     const cartItem = {
         quantity: 5
