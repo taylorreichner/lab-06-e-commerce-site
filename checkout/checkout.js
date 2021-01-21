@@ -19,6 +19,7 @@ for (let item of cart) {
     table.append(tableRow);
 }
 const tr = document.createElement('tr');
+
 const orderTotalRow = document.createElement('td');
 
 orderTotalRow.textContent = `Are you sure you want to spend ${total} on video games?`;

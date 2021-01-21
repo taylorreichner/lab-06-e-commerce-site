@@ -3,16 +3,23 @@
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = false;
+import { findById } from '../utils.js';
+import { games } from '../data.js';
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+test('findById should take in a 1 and the games array and return rocket league', (expect) => {
+
+    const expected = {
+        id: 1,
+        name: 'Rocket League',
+        image: 'rocket-league.png',
+        description: 'A soccer game played with RC cars',
+        category: 'Sports',
+        price: 15,
+    };
+
+    const actual = findById(1, games);
+
+    expect.deepEqual(actual, expected);
+   
+
 });
