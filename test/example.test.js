@@ -76,9 +76,9 @@ test('when givin items from the cart it should return a string with total order 
 test('it should return a string that defines an object???', (expect) => {
     
     const expected = '<li class=\"game-item\"><h3 class=\"game-name\"></h3><img class=\"game-image\" src=\"../assets/undefined\"><p class=\"game-description\"></p><p class=\"game-category\"></p><p class=\"game-price\">$undefined</p><button>Add to cart</button></li>';
-    const WTF = games;
+    const fakeGame = games;
 
-    const actual = renderGame(WTF);
+    const actual = renderGame(fakeGame);
 
     expect.equal(actual.outerHTML, expected);
 

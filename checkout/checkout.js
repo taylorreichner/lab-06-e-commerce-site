@@ -3,6 +3,7 @@ import { renderTableRow } from './render-table-row.js';
 import { games } from '../data.js';
 import { findById } from '../utils.js';
 import { calcOrderTotal } from '../utils.js';
+import { getCheckout } from '..cart-utils.js';
 
 const table = document.querySelector('table');
 const total = calcOrderTotal(cart, games); 
@@ -21,3 +22,12 @@ orderTotalRow.textContent = `Are you sure you want to spend $${total} on video g
 tr.append(orderTotalRow);
 table.append(tr);
 
+const Button = document.querySelector('button');
+
+Button.addEventListener('click', () => {
+    const checkout = getCheckout();
+
+    alert(JSON.stringify(checkout, true, 2));
+
+
+});
