@@ -1,12 +1,14 @@
-import { cart } from './checkout-data.js';
+//import { cart } from './checkout-data.js';
 import { renderTableRow } from './render-table-row.js';
 import { games } from '../data.js';
 import { findById } from '../utils.js';
 import { calcOrderTotal } from '../utils.js';
-import { getCheckout } from '..cart-utils.js';
+import { clearCheckout, getCheckout } from '../checkout-utils.js';
 
 const table = document.querySelector('table');
+const cart = getCheckout();
 const total = calcOrderTotal(cart, games); 
+const resetButton = document.getElementById('reset-button');
     
 for (let item of cart) {
     const game = findById(item.id, games);
@@ -26,8 +28,19 @@ const Button = document.querySelector('button');
 
 Button.addEventListener('click', () => {
     const checkout = getCheckout();
-
+    
     alert(JSON.stringify(checkout, true, 2));
 
 
 });
+
+resetButton.addEventListener('click', () => {
+    clearCheckout();
+    localStorage.removeItem('CHECKOUT', null);
+    window.location.replace('../index.html');
+
+
+
+});
+
+

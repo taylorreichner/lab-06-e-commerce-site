@@ -1,3 +1,5 @@
+import { addToCheckout } from '../checkout-utils.js';
+
 export function renderGame(game) {
     const li = document.createElement('li');
     li.classList.add('game-item'); 
@@ -28,8 +30,18 @@ export function renderGame(game) {
     li.append(pPrice);
 
     const button = document.createElement('button');
+     button.addEventListener('click', () => {
+        addToCheckout(game.id);
+      
+
+        
+
+    });
+    
     button.textContent = 'Add to cart';
     li.append(button);
 
+    
+    
     return li;
 }

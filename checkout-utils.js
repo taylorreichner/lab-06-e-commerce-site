@@ -28,14 +28,14 @@ export function clearCheckout() {
 export function setCheckout(checkout) {
     const stringyCheckout = JSON.stringify(checkout);
 
-    localStorage.setItem(checkout, stringyCheckout);
+    localStorage.setItem(CHECKOUT, stringyCheckout);
 }
 
 
 export function addToCheckout(id) {
     
     const checkout = getCheckout();
-
+    
     const checkoutItem = findById(id, checkout);
 
     if (checkoutItem) {
@@ -45,7 +45,9 @@ export function addToCheckout(id) {
             id: id,
             quantity: 1
         };
-        checkout.push(newItem);
+    
+    checkout.push(newItem);
     }    
-
+setCheckout(checkout);
 }
+
